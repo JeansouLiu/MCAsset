@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html ng-app="assetApp" ng-controller="assetController">
     <head>
-        <title ng-bind="ngMeta.title">MC Assets - Browser for Minecraft Asset Files</title>
+        <title ng-bind="ngMeta.title">MC Assets - 浏览Minecraft资源文件</title>
         <link id="favicon" rel="shortcut icon" type="image/png" href="/favicon.png"/>
 
-        <meta name="description" content="MC Assets is a browser for Minecraft asset files. Explore all Textures, Sounds, Models, Fonts, Shaders, and more from any Minecraft version, without having to extract the files yourself">
+        <meta name="description" content="MC Assets是Minecraft资源文件在线浏览器。可在线浏览所有Minecraft版本中的纹理，声音，模型，字体，着色器等，而无需自己提取文件">
         <meta name="keywords" content="minecraft,assets,browser,explorer,textures,sounds,models,shaders,fonts,version,extract,resource">
         <meta name="author" content="inventivetalent">
 
         <meta property="og:type" content="website">
         <meta property="og:title" content="{{ ngMeta['title'] || 'Minecraft Assets' }}">
-        <meta property="og:image" content="{{ ngMeta['image'] || 'https://mcasset.cloud/img/mc-assets-2-512.png' }}">
-        <meta property="og:description" content="MC Assets is a browser for Minecraft asset files. Explore all Textures, Sounds, Models, Fonts, Shaders, and more from any Minecraft version, without having to extract the files yourself">
+        <meta property="og:image" content="{{ ngMeta['image'] || 'img/mc-assets-2-512.png' }}">
+        <meta property="og:description" content="MC Assets是Minecraft资源文件在线浏览器。可在线浏览所有Minecraft版本中的纹理，声音，模型，字体，着色器等，而无需自己提取文件">
 
         <meta property="twitter:title" content="{{ ngMeta['title'] || 'Minecraft Assets' }}">
-        <meta property="twitter:image" content="{{ ngMeta['image'] || 'https://mcasset.cloud/img/mc-assets-2-512.png' }}">
-        <meta property="twitter:description" content="MC Assets is a browser for Minecraft asset files. Explore all Textures, Sounds, Models, Fonts, Shaders, and more from any Minecraft version, without having to extract the files yourself">
+        <meta property="twitter:image" content="{{ ngMeta['image'] || 'img/mc-assets-2-512.png' }}">
+        <meta property="twitter:description" content="MC Assets是Minecraft资源文件在线浏览器。可在线浏览所有Minecraft版本中的纹理，声音，模型，字体，着色器等，而无需自己提取文件">
         <meta property="twitter:creator" content="@Inventivtalent">
         <meta property="twitter:card" content="summary">
 
@@ -62,14 +62,15 @@
                 })
             });
         </script>
+    <meta charset="utf-8">
     </head>
     <body ng-cloak>
 
         <a href="https://github.com/InventivetalentDev/mcasset.cloud" target="_blank">
             <img style="position: absolute; top: 0; right: 0; border: 0;"
                  src="https://camo.githubusercontent.com/a6677b08c955af8400f44c6298f40e7d19cc5b2d/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677261795f3664366436642e706e67"
-                 alt="Fork me on GitHub"
-                 data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png">
+                 alt="在GitHub上Fork我"
+                 data-canonical-src="img/forkme_right_gray_6d6d6d.png">
         </a>
 
         <nav class="navbar navbar-default navbar-fixed-top" ng-show="asset.version && showNav" style="min-height: 40px; height: 50px;">
@@ -110,8 +111,8 @@
                     <div class="row">
                         <div class="col-md-12">
                             <p>
-                                A Browser for Minecraft Asset Files!<br/>
-                                Explore all <strong>Textures, Sounds, Models, Fonts, Shaders, and more</strong> from any Minecraft version, without having to extract the files yourself
+                                Minecraft资源文件浏览器!<br/>
+                                浏览任何Minecraft版本的 <strong>纹理, 声音, 模型, 字体, 光影等</strong>, 而不必自己提取文件
                             </p>
                         </div>
                     </div>
@@ -120,14 +121,14 @@
             <div class="container">
                 <div>
                     <div ng-show="versions.versions.length > 0">
-                        <h4>Minecraft Version</h4>
+                        <h4>Minecraft版本</h4>
                         <div class="form-group">
                             <label class="col-lg-2 control-label" for="inputVersion">
-                                <strong>Minecraft Version</strong>
+                                <strong>Minecraft版本</strong>
                             </label>
                             <div class="col-lg-10">
                                 <select id="inputVersion" ng-model="asset.version" class="form-control" ng-change="versionChanged()">
-                                    <option value="" disabled selected>Please select a Minecraft Version</option>
+                                    <option value="" disabled selected>请选择一个 Minecraft 版本</option>
                                     <optgroup label="Releases">
                                         <option ng-repeat="version in versions.versions" ng-if="version.type==='release'" value="{{version.id}}">{{version.id + (version.id === versions.latest.release ? " (latest)" : "")}}</option>
                                     </optgroup>
@@ -157,14 +158,14 @@
                     </div>
                     <div ng-hide="versions.versions.length > 0">
                         <img src="img/loading.svg">
-                        <strong>Loading Versions...</strong>
+                        <strong>加载版本中...</strong>
                     </div>
                 </div>
                 <br/>
                 <br/>
                 <div>
                     <div ng-show="asset.version">
-                        <h4>Browse Files</h4>
+                        <h4>浏览文件</h4>
                         <ol class="breadcrumb">
                             <a href="#" ng-if="asset.pathElements.length > 0" ng-click="goToPath(getJoinedPath(asset.pathElements.length-1))" style="padding-right: 6px;">
                                 <i class="fa fa-arrow-left" aria-hidden="true"></i>
@@ -181,7 +182,7 @@
                                 </a>
                             </li>
 
-                            <span class="pull-right" ng-show="assetIndex">{{ assetIndex.length }} Files</span>
+                            <span class="pull-right" ng-show="assetIndex">{{ assetIndex.length }} 个文件</span>
                         </ol>
 
                         <div ng-show="assetIndex.length > 0" style="margin-bottom: 20px;">
@@ -201,23 +202,23 @@
                         </div>
                         <div>
                    <span>
-                        Download &nbsp;
+                        下载 &nbsp;
                         <a href="https://api.github.com/repos/InventivetalentDev/minecraft-assets/zipball/{{asset.version}}" title="Download .zip archive"><i class="fa fa-download" aria-hidden="true"></i> .zip</a>
                         &nbsp;
                         <a href="https://api.github.com/repos/InventivetalentDev/minecraft-assets/tarball/{{asset.version}}" title="Download .tar.gz archive"><i class="fa fa-download" aria-hidden="true"></i> .tar.gz</a>
                    </span>
 
-                            <span class="pull-right"><span class="text-muted">Files last downloaded &amp; extracted on </span>{{versionInfo.downloadTimestamp | date: "medium"}}</span>
+                            <span class="pull-right"><span class="text-muted">文件最后一次在 </span>{{versionInfo.downloadTimestamp | date: "medium"}}<span calss="text-muted"> 下载和提取</span></span>
                         </div>
                     </div>
                     <div ng-show="asset.version && assetIndex.length <= 0">
                         <img src="/img/loading.svg">
-                        <strong>Loading Assets...</strong>
+                        <strong>加载资源中...</strong>
                     </div>
 
                     <br/>
                     <br/>
-                    <a href="https://www.patreon.com/bePatron?u=554075" data-patreon-widget-type="become-patron-button">Become a Patron!</a><script async src="https://c6.patreon.com/becomePatronButton.bundle.js"></script>
+                    <a href="https://www.patreon.com/bePatron?u=554075" data-patreon-widget-type="become-patron-button">赞助!</a><script async src="https://c6.patreon.com/becomePatronButton.bundle.js"></script>
                 </div>
             </div>
         </div>
@@ -226,17 +227,17 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-6">
-                        <span>Maintained by <a href="https://inventivetalent.org/?utm_source=mcassets&utm_medium=author_link" target="_blank">inventivetalent</a></span>
+                        <span>由 <a href="https://inventivetalent.org/?utm_source=mcassets&utm_medium=author_link" target="_blank">inventivetalent</a> 维护</span>
                         &nbsp;
                         &nbsp;
-                        Not affiliated with Minecraft / Mojang AB.
+                        与 Minecraft / Mojang AB 无关.
                     </div>
                     <div class="col-sm-6">
                 <span class="pull-right">
-                    <span class="text-muted" title="{{githubRequestsReset>0 ? 'Resets on ' + (githubRequestsReset*1000 | date : 'medium') : ''}}">{{githubRequestsRemaining}} GitHub requests remaining</span>
+                    <span class="text-muted" title="{{githubRequestsReset>0 ? 'Resets on ' + (githubRequestsReset*1000 | date : 'medium') : ''}}">你还剩余 {{githubRequestsRemaining}} 次GitHub请求</span>
 
-                    <span ng-if="githubAccessToken" style="color: green;" title="GitHub authenticated! ({{githubUser.name}})"><i class="fa fa-check" aria-hidden="true"></i></span>
-                    <span ng-if="githubAccessToken == undefined" style="color: red;" title="GitHub not yet authenticated"><i class="fa fa-times" aria-hidden="true"></i></span>
+                    <span ng-if="githubAccessToken" style="color: green;" title="GitHub 验证成功! ({{githubUser.name}})"><i class="fa fa-check" aria-hidden="true"></i></span>
+                    <span ng-if="githubAccessToken == undefined" style="color: red;" title="你还未验证GitHub账户"><i class="fa fa-times" aria-hidden="true"></i></span>
                 </span>
                     </div>
                 </div>
@@ -262,9 +263,9 @@
 
                         <div ng-if="previewFile._contentType && !previewFile._isText() && !previewFile._isImage() && !previewFile._isAudio()">
                             <p>
-                                <strong>File cannot be displayed.</strong>
+                                <strong>文件无法显示.</strong>
                                 <br/>
-                                Please use the links below to view/download the file directly.
+                                请使用下面的链接直接下载/查看.
                             </p>
                         </div>
                         <div ng-if="!previewFile._contentType">
@@ -273,12 +274,12 @@
                     </div>
                     <div class="modal-footer">
                 <span class="text-muted pull-left">
-                    <a target="_blank" href="https://assets.mcasset.cloud/{{asset.version}}/{{previewFile.path}}">{{asset.version}}/{{previewFile.path}}</a>
+                    <a target="_blank" href="{{asset.version}}/{{previewFile.path}}">{{asset.version}}/{{previewFile.path}}</a>
                 </span>
                         <span>
-                    <a href="{{previewFile.html_url}}" target="_blank"><i class="fa fa-github" aria-hidden="true"></i> View on GitHub</a>
+                    <a href="{{previewFile.html_url}}" target="_blank"><i class="fa fa-github" aria-hidden="true"></i> 在GitHub上查看</a>
                     &nbsp;
-                    <a href="{{previewFile.download_url}}" target="_blank"><i class="fa fa-download" aria-hidden="true"></i> Download File</a>
+                    <a href="{{previewFile.download_url}}" target="_blank"><i class="fa fa-download" aria-hidden="true"></i> 下载文件</a>
                 </span>
                     </div>
                 </div>
@@ -290,23 +291,23 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <h1 class="modal-title">GitHub authentication</h1>
+                        <h1 class="modal-title">GitHub账户登录</h1>
                     </div>
 
                     <div class="modal-body">
                         <p>
-                            <strong>Hey! Please authenticate via GitHub to use this website.</strong>
+                            <strong>嘿! 请使用GitHub账户登录此网站.</strong>
                             <br/>
                             <br/>
-                            Non-authenticated requests to the GitHub API are limited to 60 per hour (see the bottom right corner),<br/>
-                            please click the button below to authenticate yourself for up to 5,000 requests per hour.
+                            如果不登录，你的GitHub API 请求将只有每小时60次 (见右下角),<br/>
+                            请点击下方按钮登录以获得每小时5000次的请求.
                             <br/>
                             <br/>
-                            <span class="text-muted">(This isn't required, but you'll run into problems when browsing a lot of files)</span>
+                            <span class="text-muted">(这不是必须的，但是不登录会在你查看大量文件是出现问题)</span>
                             <br/>
                         </p>
                         <div class="text-center">
-                            <a href="https://auth.mcasset.cloud/github/index.php" class="btn btn-success">Authenticate via GitHub</a>
+                            <a href="https://auth.mcasset.cloud/github/index.php" class="btn btn-success">用GitHub登录此网站</a>
                         </div>
                     </div>
                 </div>
@@ -322,7 +323,7 @@
 
         <script>
             window.DOP_config = {
-                links: { // Replace with your links
+                links: { // 换成你的
                     paypal: "https://paypal.me/inventivetalent",
                     patreon: "https://patreon.com/inventivetalent"
                 },
@@ -341,8 +342,8 @@
 
                 ngMetaProvider.useTitleSuffix(true);
                 ngMetaProvider.setDefaultTitleSuffix(" | Minecraft Assets");
-                ngMetaProvider.setDefaultTitle("MC Assets - Browser for Minecraft Asset Files");
-                ngMetaProvider.setDefaultTag("image", "https://mcasset.cloud/img/mc-assets-2-512.png");
+                ngMetaProvider.setDefaultTitle("MC Assets - Minecraft资源浏览器");
+                ngMetaProvider.setDefaultTag("image", "img/mc-assets-2-512.png");
 
             });
 
@@ -351,7 +352,7 @@
             }]);
 
             assetApp.controller("assetController", ["$scope", "$location", "$http", "$timeout", "$routeParams", "$cookies", "$window", "ngMeta", function ($scope, $location, $http, $timeout, $routeParams, $cookies, $window, ngMeta) {
-                ngMeta.setTitle("MC Assets - Browser for Minecraft Asset Files", "");
+                ngMeta.setTitle("MC Assets - Minecraft资源浏览器", "");
 
 
                 $scope.asset = {
@@ -539,7 +540,7 @@
                         url: "https://launchermeta.mojang.com/mc/game/version_manifest.json"
                     }).then(function (response) {
                         $scope.versions = response.data;
-                        console.info("Latest Version: " + $scope.versions.latest.release + " (release) / " + $scope.versions.latest.snapshot + " (snapshot)")
+                        console.info("最新版本: " + $scope.versions.latest.release + " (稳定版) / " + $scope.versions.latest.snapshot + " (快照版)")
                     });
 
                     // GitHub authentication
