@@ -1,3 +1,3 @@
 # mcasset.cloud
 
-[mcasset.cloud](https://mcasset.cloud) 网站源码.
+[mcasset.cloud](https://mcasset.cloud) 中文版网站源码.
