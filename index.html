@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html ng-app="assetApp" ng-controller="assetController">
     <head>
-        <title ng-bind="ngMeta.title">MC Assets - Minecraft ×ÊÔ´ä¯ÀÀÆ÷ÖĞÎÄ°æ</title>
+        <title ng-bind="ngMeta.title">MC Assets - Minecraft èµ„æºæµè§ˆå™¨ä¸­æ–‡ç‰ˆ</title>
         <link id="favicon" rel="shortcut icon" type="image/png" href="/favicon.png"/>
 
-        <meta name="description" content="MC Assets ÓÃÀ´ä¯ÀÀ Minecraft ×ÊÔ´ÎÄ¼ş. ²é¿´ÈÎºÎ°æ±¾ Minecraft µÄÎÆÀí¡¢ÒôĞ§¡¢Ä£ĞÍ¡¢×ÖÌåºÍ¹âÓ°ÎÄ¼ş, Äã²»ÔÙĞèÒª´ÓºËĞÄÖĞÌáÈ¡Ëü">
-        <meta name="keywords" content="ÎÒµÄÊÀ½ç,×ÊÔ´,ä¯ÀÀ,ÎÆÀí,ÒôĞ§,¹âÓ°,Ä£ĞÍ,×ÖÌå,°æ±¾,ÌáÈ¡,minecraft,assets,browser,explorer,textures,sounds,models,shaders,fonts,version,extract,resource">
+        <meta name="description" content="MC Assets ç”¨æ¥æµè§ˆ Minecraft èµ„æºæ–‡ä»¶. æŸ¥çœ‹ä»»ä½•ç‰ˆæœ¬ Minecraft çš„çº¹ç†ã€éŸ³æ•ˆã€æ¨¡å‹ã€å­—ä½“å’Œå…‰å½±æ–‡ä»¶, ä½ ä¸å†éœ€è¦ä»æ ¸å¿ƒä¸­æå–å®ƒ">
+        <meta name="keywords" content="æˆ‘çš„ä¸–ç•Œ,èµ„æº,æµè§ˆ,çº¹ç†,éŸ³æ•ˆ,å…‰å½±,æ¨¡å‹,å­—ä½“,ç‰ˆæœ¬,æå–,minecraft,assets,browser,explorer,textures,sounds,models,shaders,fonts,version,extract,resource">
         <meta name="author" content="inventivetalent">
         <meta name="translator" content="Jeansou">
 
         <meta property="og:type" content="website">
         <meta property="og:title" content="{{ ngMeta['title'] || 'Minecraft Assets Chinese Version' }}">
         <meta property="og:image" content="{{ ngMeta['image'] || 'img/mc-assets-2-512.png' }}">
-        <meta property="og:description" content="MC Assets ÓÃÀ´ä¯ÀÀ Minecraft ×ÊÔ´ÎÄ¼ş. ²é¿´ÈÎºÎ°æ±¾ Minecraft µÄÎÆÀí¡¢ÒôĞ§¡¢Ä£ĞÍ¡¢×ÖÌåºÍ¹âÓ°ÎÄ¼ş, Äã²»ÔÙĞèÒª´ÓºËĞÄÖĞÌáÈ¡Ëü">
+        <meta property="og:description" content="MC Assets ç”¨æ¥æµè§ˆ Minecraft èµ„æºæ–‡ä»¶. æŸ¥çœ‹ä»»ä½•ç‰ˆæœ¬ Minecraft çš„çº¹ç†ã€éŸ³æ•ˆã€æ¨¡å‹ã€å­—ä½“å’Œå…‰å½±æ–‡ä»¶, ä½ ä¸å†éœ€è¦ä»æ ¸å¿ƒä¸­æå–å®ƒ">
 
         <meta property="twitter:title" content="{{ ngMeta['title'] || 'Minecraft Assets Chinese Version' }}">
         <meta property="twitter:image" content="{{ ngMeta['image'] || 'img/mc-assets-2-512.png' }}">
-        <meta property="twitter:description" content="MC Assets ÓÃÀ´ä¯ÀÀ Minecraft ×ÊÔ´ÎÄ¼ş. ²é¿´ÈÎºÎ°æ±¾ Minecraft µÄÎÆÀí¡¢ÒôĞ§¡¢Ä£ĞÍ¡¢×ÖÌåºÍ¹âÓ°ÎÄ¼ş, Äã²»ÔÙĞèÒª´ÓºËĞÄÖĞÌáÈ¡Ëü">
+        <meta property="twitter:description" content="MC Assets ç”¨æ¥æµè§ˆ Minecraft èµ„æºæ–‡ä»¶. æŸ¥çœ‹ä»»ä½•ç‰ˆæœ¬ Minecraft çš„çº¹ç†ã€éŸ³æ•ˆã€æ¨¡å‹ã€å­—ä½“å’Œå…‰å½±æ–‡ä»¶, ä½ ä¸å†éœ€è¦ä»æ ¸å¿ƒä¸­æå–å®ƒ">
         <meta property="twitter:creator" content="@Inventivtalent">
         <meta property="twitter:card" content="summary">
 
@@ -61,6 +61,14 @@
                     },
                     "position": "bottom-right"
                 })
+            });
+        </script>
+	
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({
+                google_ad_client: "ca-pub-2604356629473365",
+                enable_page_level_ads: true
             });
         </script>
     </head>
@@ -111,8 +119,8 @@
                     <div class="row">
                         <div class="col-md-12">
                             <p>
-                                ²é¿´ Minecraft µÄ×ÊÔ´ÎÄ¼ş!<br/>
-                                ²éÕÒÈÎºÎ Minecraft °æ±¾µÄ <strong>ÎÆÀí¡¢ÒôĞ§¡¢Ä£ĞÍ¡¢×ÖÌåºÍ¹âÓ°µÈÎÄ¼ş</strong>, ¶ø²»ÔÙĞèÒª´ÓºËĞÄÖĞÌáÈ¡Ëü
+                                æŸ¥çœ‹ Minecraft çš„èµ„æºæ–‡ä»¶!<br/>
+                                æŸ¥æ‰¾ä»»ä½• Minecraft ç‰ˆæœ¬çš„ <strong>çº¹ç†ã€éŸ³æ•ˆã€æ¨¡å‹ã€å­—ä½“å’Œå…‰å½±ç­‰æ–‡ä»¶</strong>, è€Œä¸å†éœ€è¦ä»æ ¸å¿ƒä¸­æå–å®ƒ
                             </p>
                         </div>
                     </div>
@@ -121,19 +129,19 @@
             <div class="container">
                 <div>
                     <div ng-show="versions.versions.length > 0">
-                        <h4>Minecraft °æ±¾</h4>
+                        <h4>Minecraft ç‰ˆæœ¬</h4>
                         <div class="form-group">
                             <label class="col-lg-2 control-label" for="inputVersion">
-                                <strong>Minecraft °æ±¾</strong>
+                                <strong>Minecraft ç‰ˆæœ¬</strong>
                             </label>
                             <div class="col-lg-10">
                                 <select id="inputVersion" ng-model="asset.version" class="form-control" ng-change="versionChanged()">
-                                    <option value="" disabled selected>ÇëÑ¡ÔñÒ»¸ö Minecraft °æ±¾</option>
+                                    <option value="" disabled selected>è¯·é€‰æ‹©ä¸€ä¸ª Minecraft ç‰ˆæœ¬</option>
                                     <optgroup label="Releases">
-                                        <option ng-repeat="version in versions.versions" ng-if="version.type==='release'" value="{{version.id}}">{{version.id + (version.id === versions.latest.release ? " (×îĞÂ°æ)" : "")}}</option>
+                                        <option ng-repeat="version in versions.versions" ng-if="version.type==='release'" value="{{version.id}}">{{version.id + (version.id === versions.latest.release ? " (æœ€æ–°ç‰ˆ)" : "")}}</option>
                                     </optgroup>
                                     <optgroup label="Snapshots">
-                                        <option ng-repeat="version in versions.versions" ng-if="version.type==='snapshot'" value="{{version.id}}">{{version.id + (version.id === versions.latest.snapshot ? " (×îĞÂ°æ)" : "")}}</option>
+                                        <option ng-repeat="version in versions.versions" ng-if="version.type==='snapshot'" value="{{version.id}}">{{version.id + (version.id === versions.latest.snapshot ? " (æœ€æ–°ç‰ˆ)" : "")}}</option>
                                     </optgroup>
 
                                     <optgroup label="Old Beta" ng-if="showOldVersions">
@@ -158,14 +166,14 @@
                     </div>
                     <div ng-hide="versions.versions.length > 0">
                         <img src="img/loading.svg">
-                        <strong>¼ÓÔØ°æ±¾ÖĞ...</strong>
+                        <strong>åŠ è½½ç‰ˆæœ¬ä¸­...</strong>
                     </div>
                 </div>
                 <br/>
                 <br/>
                 <div>
                     <div ng-show="asset.version">
-                        <h4>ä¯ÀÀÎÄ¼ş</h4>
+                        <h4>æµè§ˆæ–‡ä»¶</h4>
                         <ol class="breadcrumb">
                             <a href="#" ng-if="asset.pathElements.length > 0" ng-click="goToPath(getJoinedPath(asset.pathElements.length-1))" style="padding-right: 6px;">
                                 <i class="fa fa-arrow-left" aria-hidden="true"></i>
@@ -182,7 +190,7 @@
                                 </a>
                             </li>
 
-                            <span class="pull-right" ng-show="assetIndex">{{ assetIndex.length }} ¸öÎÄ¼ş</span>
+                            <span class="pull-right" ng-show="assetIndex">{{ assetIndex.length }} ä¸ªæ–‡ä»¶</span>
                         </ol>
 
                         <div ng-show="assetIndex.length > 0" style="margin-bottom: 20px;">
@@ -202,23 +210,23 @@
                         </div>
                         <div>
                    <span>
-                        ÏÂÔØ &nbsp;
-                        <a href="https://api.github.com/repos/InventivetalentDev/minecraft-assets/zipball/{{asset.version}}" title="ÏÂÔØ .zip Ñ¹Ëõ°ü"><i class="fa fa-download" aria-hidden="true"></i> .zip</a>
+                        ä¸‹è½½ &nbsp;
+                        <a href="https://api.github.com/repos/InventivetalentDev/minecraft-assets/zipball/{{asset.version}}" title="ä¸‹è½½ .zip å‹ç¼©åŒ…"><i class="fa fa-download" aria-hidden="true"></i> .zip</a>
                         &nbsp;
-                        <a href="https://api.github.com/repos/InventivetalentDev/minecraft-assets/tarball/{{asset.version}}" title="ÏÂÔØ .tar.gz Ñ¹Ëõ°ü"><i class="fa fa-download" aria-hidden="true"></i> .tar.gz</a>
+                        <a href="https://api.github.com/repos/InventivetalentDev/minecraft-assets/tarball/{{asset.version}}" title="ä¸‹è½½ .tar.gz å‹ç¼©åŒ…"><i class="fa fa-download" aria-hidden="true"></i> .tar.gz</a>
                    </span>
 
-                            <span class="pull-right"><span class="text-muted">ÎÄ¼ş×îºóÒ»´ÎÏÂÔØ&ÌáÈ¡ÓÚ </span>{{versionInfo.downloadTimestamp | date: "medium"}}</span>
+                            <span class="pull-right"><span class="text-muted">æ–‡ä»¶æœ€åä¸€æ¬¡ä¸‹è½½&æå–äº </span>{{versionInfo.downloadTimestamp | date: "medium"}}</span>
                         </div>
                     </div>
                     <div ng-show="asset.version && assetIndex.length <= 0">
                         <img src="/img/loading.svg">
-                        <strong>¼ÓÔØ×ÊÔ´ÖĞ...</strong>
+                        <strong>åŠ è½½èµ„æºä¸­...</strong>
                     </div>
 
                     <br/>
                     <br/>
-                    <a href="https://www.patreon.com/bePatron?u=554075" data-patreon-widget-type="become-patron-button">ÔŞÖúÔ­×÷Õß!</a><a href="https://www.patreon.com/bePatron?u=22183810" data-patreon-widget-type="become-patron-button">ÔŞÖú Jeansou!</a><script async src="https://c6.patreon.com/becomePatronButton.bundle.js"></script>
+                    <a href="https://www.patreon.com/bePatron?u=554075" data-patreon-widget-type="become-patron-button">èµåŠ©åŸä½œè€…!</a><a href="https://www.patreon.com/bePatron?u=22183810" data-patreon-widget-type="become-patron-button">èµåŠ© Jeansou!</a><script async src="https://c6.patreon.com/becomePatronButton.bundle.js"></script>
                 </div>
             </div>
         </div>
@@ -227,20 +235,20 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-6">
-                        <span>ÓÉ <a href="https://inventivetalent.org/?utm_source=mcassets&utm_medium=author_link" target="_blank">inventivetalent</a> Î¬»¤</span>
+                        <span>ç”± <a href="https://inventivetalent.org/?utm_source=mcassets&utm_medium=author_link" target="_blank">inventivetalent</a> ç»´æŠ¤</span>
                         &nbsp;
                         &nbsp;
-                        ±¾Õ¾²»ÊôÓÚ Minecraft / Mojang AB.
+                        æœ¬ç«™ä¸å±äº Minecraft / Mojang AB.
 						&nbsp;
                         &nbsp;
-						<span>ÖĞÎÄ°æÓÉ <a href="https://blog.jeansou.com" target="_blank">Jeansou</a> Î¬»¤</span>
+						<span>ä¸­æ–‡ç‰ˆç”± <a href="https://blog.jeansou.com" target="_blank">Jeansou</a> ç»´æŠ¤</span>
                     </div>
                     <div class="col-sm-6">
                 <span class="pull-right">
-                    <span class="text-muted" title="{{githubRequestsReset>0 ? 'Resets on ' + (githubRequestsReset*1000 | date : 'medium') : ''}}">Ê£Óà {{githubRequestsRemaining}} ´Î GitHub ÇëÇó</span>
+                    <span class="text-muted" title="{{githubRequestsReset>0 ? 'Resets on ' + (githubRequestsReset*1000 | date : 'medium') : ''}}">å‰©ä½™ {{githubRequestsRemaining}} æ¬¡ GitHub è¯·æ±‚</span>
 
-                    <span ng-if="githubAccessToken" style="color: green;" title="GitHub µÇÂ¼³É¹¦! ({{githubUser.name}})"><i class="fa fa-check" aria-hidden="true"></i></span>
-                    <span ng-if="githubAccessToken == undefined" style="color: red;" title="Î´µÇÂ¼ GitHub"><i class="fa fa-times" aria-hidden="true"></i></span>
+                    <span ng-if="githubAccessToken" style="color: green;" title="GitHub ç™»å½•æˆåŠŸ! ({{githubUser.name}})"><i class="fa fa-check" aria-hidden="true"></i></span>
+                    <span ng-if="githubAccessToken == undefined" style="color: red;" title="æœªç™»å½• GitHub"><i class="fa fa-times" aria-hidden="true"></i></span>
                 </span>
                     </div>
                 </div>
@@ -266,9 +274,9 @@
 
                         <div ng-if="previewFile._contentType && !previewFile._isText() && !previewFile._isImage() && !previewFile._isAudio()">
                             <p>
-                                <strong>ÎŞ·¨Ô¤ÀÀÎÄ¼ş.</strong>
+                                <strong>æ— æ³•é¢„è§ˆæ–‡ä»¶.</strong>
                                 <br/>
-                                ÇëÊ¹ÓÃÏÂ·½Á´½Ó ²é¿´/ÏÂÔØ ¸ÃÎÄ¼ş.
+                                è¯·ä½¿ç”¨ä¸‹æ–¹é“¾æ¥ æŸ¥çœ‹/ä¸‹è½½ è¯¥æ–‡ä»¶.
                             </p>
                         </div>
                         <div ng-if="!previewFile._contentType">
@@ -280,9 +288,9 @@
                     <a target="_blank" href="{{asset.version}}/{{previewFile.path}}">{{asset.version}}/{{previewFile.path}}</a>
                 </span>
                         <span>
-                    <a href="{{previewFile.html_url}}" target="_blank"><i class="fa fa-github" aria-hidden="true"></i> ÔÚ GitHub ÉÏ²é¿´</a>
+                    <a href="{{previewFile.html_url}}" target="_blank"><i class="fa fa-github" aria-hidden="true"></i> åœ¨ GitHub ä¸ŠæŸ¥çœ‹</a>
                     &nbsp;
-                    <a href="{{previewFile.download_url}}" target="_blank"><i class="fa fa-download" aria-hidden="true"></i> ÏÂÔØÎÄ¼ş</a>
+                    <a href="{{previewFile.download_url}}" target="_blank"><i class="fa fa-download" aria-hidden="true"></i> ä¸‹è½½æ–‡ä»¶</a>
                 </span>
                     </div>
                 </div>
@@ -294,23 +302,23 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <h1 class="modal-title">GitHub µÇÂ¼</h1>
+                        <h1 class="modal-title">GitHub ç™»å½•</h1>
                     </div>
 
                     <div class="modal-body">
                         <p>
-                            <strong>àË! ÇëÊ¹ÓÃ GitHub µÇÂ¼´ËÍøÕ¾.</strong>
+                            <strong>å—¨! è¯·ä½¿ç”¨ GitHub ç™»å½•æ­¤ç½‘ç«™.</strong>
                             <br/>
                             <br/>
-                            Èç¹û²»µÇÂ¼£¬ÄãÃ¿Ğ¡Ê±Ö»ÄÜä¯ÀÀ 60 ´ÎÎÄ¼ş (¼ûÓÒÏÂ·½),<br/>
-                            Çëµã»÷ÏÂ·½°´Å¥µÇÂ¼ GitHub »ñµÃÃ¿Ğ¡Ê± 5,000 ´ÎµÄÎÄ¼şä¯ÀÀ´ÎÊı.
+                            å¦‚æœä¸ç™»å½•ï¼Œä½ æ¯å°æ—¶åªèƒ½æµè§ˆ 60 æ¬¡æ–‡ä»¶ (è§å³ä¸‹æ–¹),<br/>
+                            è¯·ç‚¹å‡»ä¸‹æ–¹æŒ‰é’®ç™»å½• GitHub è·å¾—æ¯å°æ—¶ 5,000 æ¬¡çš„æ–‡ä»¶æµè§ˆæ¬¡æ•°.
                             <br/>
                             <br/>
-                            <span class="text-muted">(Õâ²»ÊÇ±ØĞëµÄ, µ«ÊÇÄã¿ÉÄÜ»áÔÚä¯ÀÀ´óÁ¿ÎÄ¼şÊ±Óöµ½ÎÊÌâ)</span>
+                            <span class="text-muted">(è¿™ä¸æ˜¯å¿…é¡»çš„, ä½†æ˜¯ä½ å¯èƒ½ä¼šåœ¨æµè§ˆå¤§é‡æ–‡ä»¶æ—¶é‡åˆ°é—®é¢˜)</span>
                             <br/>
                         </p>
                         <div class="text-center">
-                            <a href="https://auth.mcasset.cloud/github/index.php" class="btn btn-success">GitHub µÇÂ¼</a>
+                            <a href="https://auth.mcasset.cloud/github/index.php" class="btn btn-success">GitHub ç™»å½•</a>
                         </div>
                     </div>
                 </div>
@@ -326,7 +334,7 @@
 
         <script>
             window.DOP_config = {
-                links: { // Ìæ»»³ÉÄãµÄ
+                links: { // æ›¿æ¢æˆä½ çš„
                     paypal: "https://paypal.me/inventivetalent",
                     patreon: "https://www.patreon.com/jeansou"
                 },
@@ -345,7 +353,7 @@
 
                 ngMetaProvider.useTitleSuffix(true);
                 ngMetaProvider.setDefaultTitleSuffix(" | Minecraft Assets");
-                ngMetaProvider.setDefaultTitle("MC Assets - Minecraft ×ÊÔ´ä¯ÀÀÆ÷");
+                ngMetaProvider.setDefaultTitle("MC Assets - Minecraft èµ„æºæµè§ˆå™¨");
                 ngMetaProvider.setDefaultTag("image", "img/mc-assets-2-512.png");
 
             });
@@ -355,7 +363,7 @@
             }]);
 
             assetApp.controller("assetController", ["$scope", "$location", "$http", "$timeout", "$routeParams", "$cookies", "$window", "ngMeta", function ($scope, $location, $http, $timeout, $routeParams, $cookies, $window, ngMeta) {
-                ngMeta.setTitle("MC Assets - Minecraft ×ÊÔ´ä¯ÀÀÆ÷", "");
+                ngMeta.setTitle("MC Assets - Minecraft èµ„æºæµè§ˆå™¨", "");
 
 
                 $scope.asset = {
@@ -436,12 +444,12 @@
                         if (response.status === 404) {
                             console.log(response.data.message)
                             if (response.data.message.startsWith("No commit found for the ref")) {
-                                alert("Õâ¸ö°æ±¾µÄ×ÊÔ´»¹Î´Éú³É.\n" +
+                                alert("è¿™ä¸ªç‰ˆæœ¬çš„èµ„æºè¿˜æœªç”Ÿæˆ.\n" +
                                     "Please bug @Inventivtalent on twitter to get it updated ;)");
                                 return;
                             }
                         }
-                        alert("GitHub ´íÎó: " + response.data.message);
+                        alert("GitHub é”™è¯¯: " + response.data.message);
                     });
                 };
                 $scope.goToPath = function (path, $event) {
@@ -543,7 +551,7 @@
                         url: "https://launchermeta.mojang.com/mc/game/version_manifest.json"
                     }).then(function (response) {
                         $scope.versions = response.data;
-                        console.info("×îĞÂ°æ: " + $scope.versions.latest.release + " (release) / " + $scope.versions.latest.snapshot + " (snapshot)")
+                        console.info("æœ€æ–°ç‰ˆ: " + $scope.versions.latest.release + " (release) / " + $scope.versions.latest.snapshot + " (snapshot)")
                     });
 
                     // GitHub authentication
